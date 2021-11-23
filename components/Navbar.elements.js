@@ -1,36 +1,44 @@
 import styled from 'styled-components'
 
+
+
+
 export const Nav = styled.nav`
 height: 80px;
-background: #025;
+background: #000;
 color: #fff;
 display: flex;
 justify-content: space-between;
 padding: 0.5rem 0.5rem;
-/* z-index: 999; */
+position: relative;
+z-index: 999;
 `;
 
-export const StyledLinkLogo = styled.a`
-align-items: center;
-size: 5rem;
+export const StyledLinkLogo = styled.div`
+padding: .7rem 1rem;
+font-size: 1.5REM;
+white-space: nowrap;
+font-weight: 900;
+color: #5ac;
+font-family: 'Nova Cut', cursive;
 
 @media screen and (max-width: 760px) {
   text-align: center;
-  color: #fff;
   width: 100%;
   display: table;
 }
 `;
 
 export const StyledLink = styled.a`
-font-family: "Poppins", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 padding: 0rem 1rem;
 white-space: nowrap;
-size: 14px;
-font-weight: 500;
+size: 20px;
+font-weight: 400;
 
 &:hover {
-  color: #5ac;
+  color: #fff;
   transition: all 0.5s ease;
 }
 
@@ -44,24 +52,21 @@ font-weight: 500;
   font-weight: 400;
 
   &:hover {
-    color: #5ac;
+    color: #fff;
     transition: all 0.3s ease-out;
     font-size: 35px;
   }
 }
 `;
 
-export const NavLogo = styled.div`
-margin: 0.4rem 1.2rem;
-`;
 
 export const Button = styled.button`
 border-radius: 10px;
 list-style: none;
-background: ${({ primary }) => (primary ? "#5ac" : "#025")};
+background: ${({ primary }) => (primary ? "#000" : "#000")};
 white-space: nowrap;
 padding: ${({ big }) => (big ? "6px 16px" : "12px 16px")};
-color: #fff;
+color: #5ac;;
 font-size: ${({ fontBig }) => (fontBig ? "25px" : "20px")};
 outline: none;
 border: 1px solid #5ac;
@@ -90,7 +95,7 @@ align-items: center;
   left: ${({ click }) => (click ? 0 : "-100%")};
   opacity: 1;
   transition: all 0.8s ease;
-  background: #025;
+  background: #000;
 }
 `;
 

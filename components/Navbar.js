@@ -1,18 +1,16 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
-import Link from 'next/link'
-import Image from "next/image";
+import Link from "next/link";
 import {
- Nav,
- NavLogo,
- NavMenu,
- Button,
- StyledLink,
- StyledLinkLogo,
- MobileIcon,
- NavItemBtn,
- NavBtn,
+  Nav,
+  NavMenu,
+  Button,
+  StyledLink,
+  StyledLinkLogo,
+  MobileIcon,
+  NavItemBtn,
+  NavBtn,
 } from "./Navbar.elements";
 
 const Navbar = () => {
@@ -27,7 +25,7 @@ const Navbar = () => {
     } else {
       setScroll(false);
     }
-  }
+  };
 
   useEffect(() => {
     changeNav();
@@ -35,16 +33,13 @@ const Navbar = () => {
   }, []);
 
   return (
-
-
     <IconContext.Provider value={{ color: "#fff" }}>
       <Nav active={scroll} click={click}>
-        <NavLogo>
-            <StyledLinkLogo>
-             JONA DEVELOPER
-          </StyledLinkLogo>
-       
-        </NavLogo>
+        <StyledLinkLogo>
+          <Link href="/" passHref>
+            JONA
+          </Link>
+        </StyledLinkLogo>
 
         <MobileIcon onClick={handleClick}>
           {click ? <FaTimes /> : <FaBars />}
@@ -60,23 +55,30 @@ const Navbar = () => {
             <Link href="/Blogs" passHref>
               <StyledLink>Blogs</StyledLink>
             </Link>
+            <Link href="/Project" passHref>
+              <StyledLink>Project</StyledLink>
+            </Link>{" "}
+            <Link href="/Hero" passHref>
+              <StyledLink>Hero</StyledLink>
+            </Link>{" "}
           </div>
-      </NavMenu>
-     <NavBtn>
-          <NavItemBtn>
-            {Button ? (
-              <Link href="/" passHref>
-                <Button primary>Sign In</Button>
-              </Link>
-            ) : (
-              <Link href="/" passHref>
-                <Button fontBig primary>
-                  Sign In
-                </Button>
-              </Link>
-            )}
-          </NavItemBtn>
-     </NavBtn>
+
+          <NavBtn>
+            <NavItemBtn>
+              {Button ? (
+                <Link href="/" passHref>
+                  <Button primary>Sign In</Button>
+                </Link>
+              ) : (
+                <Link href="/" passHref>
+                  <Button fontBig primary>
+                    Sign In
+                  </Button>
+                </Link>
+              )}
+            </NavItemBtn>
+          </NavBtn>
+        </NavMenu>
       </Nav>
     </IconContext.Provider>
   );
