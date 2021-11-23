@@ -48,21 +48,14 @@ const Navbar = () => {
           <div>
             <Link href="/" passHref>
               <StyledLink>Home</StyledLink>
-            </Link>
-            <Link href="/About" passHref>
-              <StyledLink>About</StyledLink>
-            </Link>
-            <Link href="/Blogs" passHref>
-              <StyledLink>Blogs</StyledLink>
-            </Link>
+            </Link>        
             <Link href="/Project" passHref>
               <StyledLink>Project</StyledLink>
             </Link>{" "}
-            <Link href="/Hero" passHref>
-              <StyledLink>Hero</StyledLink>
+            <Link href="/Example" passHref>
+              <StyledLink>Example</StyledLink>
             </Link>{" "}
           </div>
-
           <NavBtn>
             <NavItemBtn>
               {Button ? (

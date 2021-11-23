@@ -5,8 +5,8 @@ import styled from 'styled-components'
 
 export const Nav = styled.nav`
 height: 80px;
-background: #000;
-color: #fff;
+background:#000;
+color: #ff6961;
 display: flex;
 justify-content: space-between;
 padding: 0.5rem 0.5rem;
@@ -19,7 +19,8 @@ padding: .7rem 1rem;
 font-size: 1.5REM;
 white-space: nowrap;
 font-weight: 900;
-color: #5ac;
+color: #ff6961;
+
 font-family: 'Nova Cut', cursive;
 
 @media screen and (max-width: 760px) {
@@ -66,7 +67,7 @@ list-style: none;
 background: ${({ primary }) => (primary ? "#000" : "#000")};
 white-space: nowrap;
 padding: ${({ big }) => (big ? "6px 16px" : "12px 16px")};
-color: #5ac;;
+color: #ff6961;;
 font-size: ${({ fontBig }) => (fontBig ? "25px" : "20px")};
 outline: none;
 border: 1px solid #5ac;
@@ -75,7 +76,7 @@ cursor: pointer;
 
 &:hover {
   transition: all 0.8s ease-out;
-  background: ${({ primary }) => (primary ? "#025" : "#5ac")};
+  background: ${({ primary }) => (primary ? "#ff6961" : "#5ac")};
   color: #ffffff;
 }
 `;
@@ -95,7 +96,7 @@ align-items: center;
   left: ${({ click }) => (click ? 0 : "-100%")};
   opacity: 1;
   transition: all 0.8s ease;
-  background: #000;
+  background: #222;
 }
 `;
 
@@ -136,7 +137,7 @@ margin-right: 50px;
   left: ${({ click }) => (click ? 0 : "-100%")};
   opacity: 1;
   transition: all 0.8s ease;
-  background: #028;
+  background: #ff6961;
 }
 
 `;

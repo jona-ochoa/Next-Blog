@@ -37,14 +37,13 @@ const SliderData = [
   },
 ];
 
-const HeroSection = styled.section`
+const ExampleSection = styled.section`
   height: 100vh;
-  max-height: 1200px;
-  /* position: relative; */
+  position: relative;
   overflow: hidden;
 `;
 
-const HeroWrapper = styled.div`
+const ExampleWrapper = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
@@ -54,13 +53,13 @@ const HeroWrapper = styled.div`
   position: relative;
 `;
 
-const HeroSlide = styled.div`
+const ExampleSlide = styled.div`
   z-index: 1;
   width: 100%;
   height: 100%;
 `;
 
-const HeroSlider = styled.div`
+const ExampleSlider = styled.div`
   position: absolute;
   top: 0;
   left: 0;
@@ -89,7 +88,7 @@ const HeroSlider = styled.div`
   }
 `;
 
-const HeroContent = styled.div`
+const ExampleContent = styled.div`
   position: relative;
   z-index: 10;
   display: flex;
@@ -114,7 +113,7 @@ const HeroContent = styled.div`
 `;
 
 const Arrow = styled(IoMdArrowRoundForward)`
-  ${arrowButtons}
+ 
 `;
 
 const SliderButton = styled.div`
@@ -139,7 +138,7 @@ const arrowButtons = css`
   transition: 0.3s;
 
   &:hover {
-    background: #028;
+    background: #ff6961;
     color: #fff;
     transform: scale(1.05);
   }
@@ -153,7 +152,7 @@ const NextArrow = styled(IoArrowForward)`
   ${arrowButtons}
 `;
 
-const Hero = ({ slides }) => {
+const Example = ({ slides }) => {
   const [current, setCurrent] = useState(0);
   const length = SliderData.length;
   // const timeout= useRef(null)
@@ -170,13 +169,13 @@ const Hero = ({ slides }) => {
 
   return (
     <Layout>
-      <HeroSection>
-        <HeroWrapper>
+      <ExampleSection>
+        <ExampleWrapper>
           {SliderData.map((slide, index) => {
             return (
-              <HeroSlide key={index}>
+              <ExampleSlide key={index}>
                 {index === current && (
-                  <HeroSlider>
+                  <ExampleSlider>
                  
                       <Image
                         src={slide.src}
@@ -186,7 +185,7 @@ const Hero = ({ slides }) => {
                         alt="Jonatan Ochoa"
                       />
              
-                    <HeroContent>
+                    <ExampleContent>
                       <h1>{slide.title}</h1>
                       <p>{slide.price}</p>
                       <Button
@@ -197,20 +196,20 @@ const Hero = ({ slides }) => {
                       >
                        {slide.label}  <Arrow  />
                       </Button>
-                    </HeroContent>
-                  </HeroSlider>
+                    </ExampleContent>
+                  </ExampleSlider>
                 )}
-              </HeroSlide>
+              </ExampleSlide>
             );
           })}
           <SliderButton>
             <PrevArrow onClick={prevSlide} />
             <NextArrow onClick={nextSlide} />
           </SliderButton>
-        </HeroWrapper>
-      </HeroSection>
+        </ExampleWrapper>
+      </ExampleSection>
     </Layout>
   );
 };
 
-export default Hero;
+export default Example;
