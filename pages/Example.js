@@ -8,32 +8,32 @@ import Layout from "../components/Layout";
 
 const SliderData = [
   {
-    title: "Luxuri House in Las Vegas, Nevada",
+    title: "JAVASCRIP",
     price: "$8,300,000",
     label: "View Home",
     alt: "House",
-    src: "/images/house.jpg",
+    src: "/images/Group 16.png",
   },
   {
-    title: "Houston, Texas",
+    title: "PHP",
     price: "$6,300,000",
     label: "View Home",
     alt: "House",
-    src: "/images/house.jpg",
+    src: "/images/Group 13.png",
   },
   {
-    title: "Luxuri Villa in Bali, Indonesia",
+    title: "REACT JS",
     price: "$6,300,000",
     label: "View Home",
     alt: "House",
-    src: "/images/house.jpg",
+    src: "/images/Group 17.png",
   },
   {
-    title: "Alajuela, Costa Rica",
+    title: "HTML",
     price: "$9,300,000",
     label: "View Home",
     alt: "House",
-    src: "/images/house.jpg",
+    src: "/images/Group 14.png",
   },
 ];
 
@@ -95,7 +95,7 @@ const ExampleContent = styled.div`
   flex-direction: column;
   max-width: 1600px;
   width: calc(100% - 100px);
-  color: #fff;
+  color: #000;
 
   h1 {
     font-size: clamp (1rem, 8vw, 8rem);
@@ -112,9 +112,7 @@ const ExampleContent = styled.div`
   }
 `;
 
-const Arrow = styled(IoMdArrowRoundForward)`
- 
-`;
+const Arrow = styled(IoMdArrowRoundForward)``;
 
 const SliderButton = styled.div`
   position: absolute;
@@ -176,15 +174,14 @@ const Example = ({ slides }) => {
               <ExampleSlide key={index}>
                 {index === current && (
                   <ExampleSlider>
-                 
-                      <Image
-                        src={slide.src}
+                    <Image
+                      src={slide.src}
                       layout="fill"
                       width="100%"
                       height="100%"
-                        alt="Jonatan Ochoa"
-                      />
-             
+                      alt="Jonatan Ochoa"
+                    />
+
                     <ExampleContent>
                       <h1>{slide.title}</h1>
                       <p>{slide.price}</p>
@@ -194,7 +191,7 @@ const Example = ({ slides }) => {
                           max-width: 160px;
                         `}
                       >
-                       {slide.label}  <Arrow  />
+                        {slide.label} <Arrow />
                       </Button>
                     </ExampleContent>
                   </ExampleSlider>
