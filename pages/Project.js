@@ -1,10 +1,9 @@
-import Layout from "../components/Layout";
 import styles from "../styles/Home.module.css";
 import styled from "styled-components";
 
 const ProContainer = styled.section`
-   background: #ff6961;
-   min-height: 100vh;
+  background: #ff6961;
+  min-height: 100vh;
   padding: 4rem 2rem;
   flex: 1;
   display: flex;

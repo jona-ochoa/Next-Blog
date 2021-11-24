@@ -14,13 +14,12 @@ const Title = styled.h1`
   font-size: 1rem;
   color: #ff6961;
   margin: 0;
-  line-height: 1.15;
 `;
 
 function Footer() {
   return (
     <FooterH>
-      <Title>JonaO Develop 2021 All Rigths Reserved</Title>
+      <Title>Jonan 2021 All Rigths Reserved</Title>
     </FooterH>
   );
 }
