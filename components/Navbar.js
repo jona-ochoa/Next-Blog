@@ -37,7 +37,7 @@ const Navbar = () => {
       <Nav active={scroll} click={click}>
         <StyledLinkLogo>
           <Link href="/" passHref>
-            JONA
+            Jona-web
           </Link>
         </StyledLinkLogo>
 

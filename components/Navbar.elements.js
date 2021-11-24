@@ -19,7 +19,7 @@ padding: .7rem 1rem;
 font-size: 1.5REM;
 white-space: nowrap;
 font-weight: 900;
-color: #ff6961;
+color: #fff;
 
 font-family: 'Nova Cut', cursive;
 

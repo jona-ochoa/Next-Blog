@@ -6,7 +6,7 @@ const Layout = ({ children }) => {
     <>
       <div>
         <Head>
-          <title>Jona-Website</title>
+          <title>Jona-web</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <Navbar />
