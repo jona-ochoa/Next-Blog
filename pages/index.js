@@ -1,17 +1,16 @@
 import styled from "styled-components";
 import Image from "next/image";
-import { AboutH1 } from "../components/About.elements";
 
 const Container = styled.section`
   width: 100%;
-  height: 100vh;
+  height: 100%; 
   background: #ff6961;
   display: flex;
   padding: 1rem 1rem;
 `;
 const Card = styled.div`
   flex: 1;
-  padding: 10px;
+  padding: 0px;
   padding-right: 0;
   display: flex;
   flex-direction: column;
@@ -40,6 +39,7 @@ const Descrip = styled.p`
   color: #000;
   font-size: 18px;
   line-height: 44px;
+  max-width: 350px;
 `;
 
 export default function Home() {
@@ -51,10 +51,7 @@ export default function Home() {
           <Descrip>
             Lorem Ipsum es simplemente el texto de relleno de las imprentas y
             archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar
-            de las industrias desde el año 1500, cuando un impresor (N. del T.
-            persona que se dedica a la imprenta) desconocido usó una galería de
-            textos y los mezcló de tal manera que logró hacer un libro de textos
-            especimen.
+            de las industrias desde el año 1500.
           </Descrip>
         </Card>
         <Card>
