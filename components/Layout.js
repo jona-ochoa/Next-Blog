@@ -6,8 +6,8 @@ const Layout = ({ children }) => {
     <>
       <div>
         <Head>
-          <title>JonaCode</title>
-          <link rel="icon" href="/favicon.svg" />
+          <title>Jona-Website</title>
+          <link rel="icon" href="/favicon.ico" />
         </Head>
         <Navbar />
        <main> {children}</main>
