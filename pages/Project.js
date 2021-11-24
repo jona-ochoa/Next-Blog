@@ -23,7 +23,7 @@ const Title = styled.h1`
 
 function Project() {
   return (
-    <Layout>
+    <>
       <ProContainer>
         <Title>Lorem Ipsum</Title>
         <header className={styles.title}>
@@ -43,7 +43,7 @@ function Project() {
           </p>
         </header>
       </ProContainer>
-    </Layout>
+    </>
   );
 }
 export default Project;

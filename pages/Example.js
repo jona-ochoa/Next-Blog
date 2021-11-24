@@ -4,33 +4,33 @@ import Image from "next/image";
 import { Button } from "../components/Navbar.elements";
 import { IoMdArrowRoundForward } from "react-icons/io";
 import { IoArrowForward, IoArrowBack } from "react-icons/io5";
-import Layout from "../components/Layout";
+import Link from 'next/link';
 
 const SliderData = [
   {
-    title: "JAVASCRIP",
-    price: "$8,300,000",
+    title: "Curso de JAVASCRIP",
+    price: "$8,300,00",
     label: "View Home",
     alt: "House",
     src: "/images/Group 16.png",
   },
   {
-    title: "PHP",
-    price: "$6,300,000",
+    title: "Curso de PHP",
+    price: "$6,300,00",
     label: "View Home",
     alt: "House",
     src: "/images/Group 13.png",
   },
   {
-    title: "REACT JS",
-    price: "$6,300,000",
+    title: "Curso de REACT JS",
+    price: "$6,300,00",
     label: "View Home",
     alt: "House",
     src: "/images/Group 17.png",
   },
   {
-    title: "HTML",
-    price: "$9,300,000",
+    title: "Curso de HTML",
+    price: "$9,300,00",
     label: "View Home",
     alt: "House",
     src: "/images/Group 14.png",
@@ -166,7 +166,7 @@ const Example = ({ slides }) => {
   };
 
   return (
-    <Layout>
+    <>
       <ExampleSection>
         <ExampleWrapper>
           {SliderData.map((slide, index) => {
@@ -185,14 +185,16 @@ const Example = ({ slides }) => {
                     <ExampleContent>
                       <h1>{slide.title}</h1>
                       <p>{slide.price}</p>
-                      <Button
-                        primary="true"
-                        css={`
-                          max-width: 160px;
-                        `}
-                      >
-                        {slide.label} <Arrow />
-                      </Button>
+                      <Link href="/" passHref>
+                        <Button
+                          primary="true"
+                          css={`
+                            max-width: 160px;
+                          `}
+                        >
+                          {slide.label} <Arrow />
+                        </Button>
+                      </Link>
                     </ExampleContent>
                   </ExampleSlider>
                 )}
@@ -205,7 +207,7 @@ const Example = ({ slides }) => {
           </SliderButton>
         </ExampleWrapper>
       </ExampleSection>
-    </Layout>
+    </>
   );
 };
 

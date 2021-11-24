@@ -48,7 +48,10 @@ const Navbar = () => {
           <div>
             <Link href="/" passHref>
               <StyledLink>Home</StyledLink>
-            </Link>        
+            </Link>{" "}
+            <Link href="/About" passHref>
+              <StyledLink>About</StyledLink>
+            </Link>{" "}
             <Link href="/Project" passHref>
               <StyledLink>Project</StyledLink>
             </Link>{" "}
