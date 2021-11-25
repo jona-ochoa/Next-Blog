@@ -1,5 +1,7 @@
 import styles from "../styles/Home.module.css";
 import styled from "styled-components";
+import Link from "next/link";
+import { Button } from "../components/Navbar.elements";
 
 const ProContainer = styled.section`
   background: #ff6961;
@@ -40,6 +42,11 @@ function Project() {
             por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem
             Ipsum.
           </p>
+          <Link href="/About" passHref>
+              <Button primary fontbig>
+                View Home
+              </Button>
+            </Link>
         </header>
       </ProContainer>
     </>

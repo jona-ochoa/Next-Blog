@@ -1,16 +1,20 @@
 import styled from "styled-components";
 import Image from "next/image";
+import About from "./About";
+import App from "./App";
+import Example from './Example';
+import Project from './Project'
 
 const Container = styled.section`
   width: 100%;
   height: 100%; 
   background: #ff6961;
   display: flex;
-  padding: 1rem 1rem;
+  padding: .5rem 1rem;
 `;
 const Card = styled.div`
   flex: 1;
-  padding: 0px;
+  padding: 10px;
   padding-right: 0;
   display: flex;
   flex-direction: column;
@@ -19,7 +23,7 @@ const Card = styled.div`
 `;
 
 const BGimage = styled.div`
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 660px) {
     display: none;
   }
 `;
@@ -43,6 +47,7 @@ const Descrip = styled.p`
 `;
 
 export default function Home() {
+  
   return (
     <>
       <Container>
@@ -61,11 +66,16 @@ export default function Home() {
               width="100%"
               height="100%"
               layout="fill"
-              alt="Jonatan Ochoa"
+              alt="Foto1"
             />
           </BGimage>
         </Card>
       </Container>
+      <About/>
+      <Project />
+      <Example />
+      <App />
+      
     </>
   );
 }

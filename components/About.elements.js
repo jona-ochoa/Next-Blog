@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.section`
  background: #ff6961;
   min-height: 100vh;
-  padding: 2rem 2rem;
+  padding: 2.5rem .5rem;
   flex: 1;
   display: flex;
 `;
@@ -31,6 +31,7 @@ export const AboutItems = styled.div`
 export const TopLine = styled.h5`
   font-size: 20px;
   line-height: 30px;
+  font-size: 16px;
   letter-spacing: 1.5px;
   font-weight: 500;
   color: #000; 
@@ -40,14 +41,16 @@ export const TopLine = styled.h5`
 export const AboutH1 = styled.h1`
   font-family: " Poppins", sans-serif;
   font-weight: 900;
+  font-size: 46px;
   color: #fff;
   margin: 0px 0px 20px 17px;
 `;
 
 export const AboutP = styled.p`
-  font-family: "Montserrat", sans-serif;
+  font-family: " Poppins", sans-serif;
   color: #fff;
-  font-size: 18px;
+  font-weight: 300;
+  font-size: 15px;
   margin: 0px 0px 12px 17px;
 `;
 

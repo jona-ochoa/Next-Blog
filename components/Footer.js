@@ -19,7 +19,7 @@ const Title = styled.h1`
 function Footer() {
   return (
     <FooterH>
-      <Title>Jonan 2021 All Rigths Reserved</Title>
+      <Title>Project Emerald 2021 All Rigths Reserved</Title>
     </FooterH>
   );
 }

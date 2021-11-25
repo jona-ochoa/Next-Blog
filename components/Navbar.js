@@ -37,7 +37,7 @@ const Navbar = () => {
       <Nav active={scroll} click={click}>
         <StyledLinkLogo>
           <Link href="/" passHref>
-            Jona-web
+            Project Emerald
           </Link>
         </StyledLinkLogo>
 
@@ -48,16 +48,19 @@ const Navbar = () => {
           <div>
             <Link href="/" passHref>
               <StyledLink>Home</StyledLink>
-            </Link>{" "}
+            </Link>
             <Link href="/About" passHref>
               <StyledLink>About</StyledLink>
-            </Link>{" "}
+            </Link>
             <Link href="/Project" passHref>
               <StyledLink>Project</StyledLink>
-            </Link>{" "}
+            </Link>
             <Link href="/Example" passHref>
               <StyledLink>Example</StyledLink>
-            </Link>{" "}
+            </Link>    
+            <Link href="/App" passHref>
+              <StyledLink>App</StyledLink>
+            </Link>           
           </div>
           <NavBtn>
             <NavItemBtn>

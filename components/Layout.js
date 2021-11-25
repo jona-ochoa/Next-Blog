@@ -1,18 +1,18 @@
 import Navbar from "./Navbar";
 import Head from "next/head";
 import Footer from "./Footer";
+
+
 const Layout = ({ children }) => {
   return (
     <>
-      <div>
         <Head>
-          <title>Jona-web</title>
+          <title>Jonan</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <Navbar />
-       <main> {children}</main>
+       {children}
         <Footer />
-      </div>
     </>
   );
 };

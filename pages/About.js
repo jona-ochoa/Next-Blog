@@ -28,12 +28,12 @@ const About = () => {
           <AboutBtn>
             <Link href="/About" passHref>
               <Button primary fontbig>
-                HOME
+                View Home
               </Button>
             </Link>
             {"  "}
             <Link href="/Example" passHref>
-              <Button fontbig>SLIDER</Button>
+              <Button fontbig>Slider Example</Button>
             </Link>
           </AboutBtn>
         </AboutItems>

@@ -1,8 +1,5 @@
 import styled from 'styled-components'
 
-
-
-
 export const Nav = styled.nav`
 height: 80px;
 background:#000;
@@ -15,18 +12,22 @@ z-index: 999;
 `;
 
 export const StyledLinkLogo = styled.div`
-padding: .7rem 1rem;
-font-size: 1.5REM;
+padding: .5rem 1rem;
+font-size: 1.5rem;
 white-space: nowrap;
 font-weight: 900;
-color: #fff;
-
+color: #ff6961;
 font-family: 'Nova Cut', cursive;
 
+
+&:hover {
+  color: #fff;
+  transition: all 0.5s ease;
+}
+
+
 @media screen and (max-width: 760px) {
-  text-align: center;
-  width: 100%;
-  display: table;
+  border: none;
 }
 `;
 
