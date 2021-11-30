@@ -1,4 +1,4 @@
-import styles from "../styles/Home.module.css";
+
 import styled from "styled-components";
 import Link from "next/link";
 import { Button } from "../components/Navbar.elements";
@@ -27,8 +27,8 @@ function Project() {
     <>
       <ProContainer>
         <Title>Lorem Ipsum</Title>
-        <header className={styles.title}>
-          <p className={styles.description}>
+        <header >
+          <p >
             Lorem Ipsum es simplemente el texto de relleno de las imprentas y
             archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar
             de las industrias desde el año 1500, cuando un impresor (N. del T.

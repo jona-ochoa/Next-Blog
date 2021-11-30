@@ -41,7 +41,7 @@ const ExampleSection = styled.section`
   height: 100vh;
   position: relative;
   overflow: hidden;
-  background: transparent;
+  background: #ff6961;
 `;
 
 const ExampleWrapper = styled.div`
@@ -151,17 +151,19 @@ const NextArrow = styled(IoArrowForward)`
   ${arrowButtons}
 `;
 
-const Example = ({ slides }) => {
+const Carrusel = ({ slides }) => {
   const [current, setCurrent] = useState(0);
   const length = SliderData.length;
   // const timeout= useRef(null)
 
   const nextSlide = () => {
     setCurrent(current === length - 1 ? 0 : current + 1);
+    // console.log(current)
   };
 
   const prevSlide = () => {
     setCurrent(current === 0 ? length - 1 : current - 1);
+    // console.log(current)
   };
 
   return (
@@ -172,7 +174,7 @@ const Example = ({ slides }) => {
             return (
               <ExampleSlide key={index}>
                 {index === current && (
-                  <ExampleSlider >
+                  <ExampleSlider>
                     <Image
                       src={slide.src}
                       layout="fill"
@@ -208,6 +210,4 @@ const Example = ({ slides }) => {
   );
 };
 
-export default Example;
-
-
+export default Carrusel;

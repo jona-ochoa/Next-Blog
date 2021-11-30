@@ -33,11 +33,11 @@ const Navbar = () => {
   }, []);
 
   return (
-    <IconContext.Provider value={{ color: "#fff" }}>
+    <IconContext.Provider value={{ color: "#9DD9D2" }}>
       <Nav active={scroll} click={click}>
         <StyledLinkLogo>
           <Link href="/" passHref>
-            Project Emerald
+            Codejona
           </Link>
         </StyledLinkLogo>
 
@@ -49,18 +49,23 @@ const Navbar = () => {
             <Link href="/" passHref>
               <StyledLink>Home</StyledLink>
             </Link>
+
             <Link href="/About" passHref>
               <StyledLink>About</StyledLink>
             </Link>
+
             <Link href="/Project" passHref>
               <StyledLink>Project</StyledLink>
             </Link>
+
             <Link href="/Example" passHref>
               <StyledLink>Example</StyledLink>
             </Link>    
+
             <Link href="/App" passHref>
               <StyledLink>App</StyledLink>
-            </Link>           
+            </Link>    
+
           </div>
           <NavBtn>
             <NavItemBtn>

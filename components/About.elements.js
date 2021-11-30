@@ -1,11 +1,12 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
- background: #ff6961;
+ background: #456645;
   min-height: 100vh;
   padding: 2.5rem .5rem;
   flex: 1;
   display: flex;
+  overflow: hidden;
 `;
 
 export const Aboutspan = styled.span`

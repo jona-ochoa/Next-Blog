@@ -1,58 +1,60 @@
+import { useRouter } from "next/router";
 import styled from "styled-components";
-import Image from "next/image";
+import Project from "./Project";
 import About from "./About";
-import App from "./App";
-import Example from './Example';
-import Project from './Project'
+import Example from "./Example";
 
 const Container = styled.section`
   width: 100%;
-  height: 100%; 
-  background: #ff6961;
+  height: 100%;
+  background: #949;
   display: flex;
-  padding: .5rem 1rem;
+  overflow: hidden;
+  position: relative;
 `;
 const Card = styled.div`
   flex: 1;
-  padding: 10px;
-  padding-right: 0;
+  padding-left: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  position: relative;
 `;
 
 const BGimage = styled.div`
+  right: 0;
   @media screen and (max-width: 660px) {
     display: none;
   }
 `;
 
-const IndexH1 = styled.h1`
+const Title = styled.h1`
   font-family: " Poppins", sans-serif;
   font-weight: 900;
   font-size: 64px;
   align-items: center;
-  color: #fff;
+  color: #94b9af;
+  @media screen and (max-width: 660px) {
+    font-size: 54px;
+  }
 `;
 
 const Descrip = styled.p`
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 500;
-  color: #000;
+  color: #9dd9d2;
   font-size: 18px;
   line-height: 44px;
-  max-width: 350px;
 `;
 
-export default function Home() {
-  
+const Index = () => {
+  const router = useRouter();
+  console.log(router.query);
   return (
     <>
       <Container>
         <Card>
-          <IndexH1>Code Example Page </IndexH1>
+          <Title>Code Example Page </Title>
           <Descrip>
             Lorem Ipsum es simplemente el texto de relleno de las imprentas y
             archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar
@@ -61,21 +63,17 @@ export default function Home() {
         </Card>
         <Card>
           <BGimage>
-            <Image
-              src="/images/index.svg"
-              width="100%"
-              height="100%"
-              layout="fill"
-              alt="Foto1"
-            />
+            <video autoPlay loop style={{ width: "100%", height: "100%" }}>
+              <source src="/video.mp4" />
+            </video>
           </BGimage>
         </Card>
       </Container>
-      <About/>
+      <About />
       <Project />
       <Example />
-      <App />
-      
     </>
   );
-}
+};
+
+export default Index;

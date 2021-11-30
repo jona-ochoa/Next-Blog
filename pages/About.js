@@ -11,6 +11,9 @@ import {
   AboutBtn,
   AboutBg,
 } from "../components/About.elements";
+import YouTube  from "./YouTube";
+import App from "./App";
+import Example from "./Example";
 
 const About = () => {
   return (
@@ -43,6 +46,9 @@ const About = () => {
           </AboutBg>
         </AboutItems>
       </Container>
+      <Example />
+      <App />
+      <YouTube />
     </>
   );
 };

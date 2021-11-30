@@ -3,7 +3,7 @@ import styled from "styled-components";
 const FooterH = styled.section`
   display: flex;
   flex: 1;
-  background: #000;
+  background: #392F5A;
   padding: 1rem 0;
   justify-content: center;
   align-items: center;
@@ -12,14 +12,16 @@ const FooterH = styled.section`
 const Title = styled.h1`
   text-align: center;
   font-size: 1rem;
-  color: #ff6961;
+  color: #9DD9D2;
   margin: 0;
 `;
 
 function Footer() {
   return (
     <FooterH>
-      <Title>Project Emerald 2021 All Rigths Reserved</Title>
+      <Title>
+        Codejona 2021 All Rigths Reserved
+        </Title>
     </FooterH>
   );
 }
