@@ -3,21 +3,44 @@ import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import ButtonBase from '@mui/material/ButtonBase';
 import Typography from '@mui/material/Typography';
+import Image from 'next/dist/client/image';
 
 const images = [
-  {
-    uri: '/public/images/Group 15.png',
-    title: 'Breakfast',
+   {
+    alt: "HTML",
+    src: "/images/Group 14.png",
+    title: 'HTML',
     width: '33%',
   },
   {
-    uri: '/images/buttons/burgers.jpg',
-    title: 'Burgers',
+    alt: "CSS",
+    src: "/images/Group 15.png",
+    title: 'CSS',
     width: '33%',
   },
   {
-    uri: '/images/buttons/camera.jpg',
-    title: 'Camera',
+    alt: "JS",
+    src: "/images/Group 16.png",
+    title: 'Javascript',
+    width: '33%',
+  },
+  {
+    alt: "Angular",
+    src: "/images/Group 18.png",
+    title: 'Angular',
+    width: '33%',
+  },
+ 
+  {
+    alt: "REACT JS",
+    src: "/images/Group 17.png",
+    title: 'REACT JS',
+    width: '33%',
+  },
+  {
+    alt: "Java",
+    src: "/images/Group 10.png",
+    title: 'Java',
     width: '33%',
   },
 ];
@@ -27,7 +50,7 @@ const ImageButton = styled(ButtonBase)(({ theme }) => ({
   height: 600,
   [theme.breakpoints.down('sm')]: {
     width: '100% !important', // Overrides inline-style
-    height: 100,
+    height: 300,
   },
   '&:hover, &.Mui-focusVisible': {
     zIndex: 1,
@@ -97,7 +120,12 @@ export default function ButtonBases() {
             width: image.width,
           }}
         >
-          <ImageSrc style={{ backgroundImage: `uri(${image.uri})` }} />
+          <Image
+            src={image.src}
+            alt={images.alt}
+            layout="fill"
+          />
+          <ImageSrc style={{ backgroundImage: `uri(${image.src})` }} />
           <ImageBackdrop className="MuiImageBackdrop-root" />
           <ImageTwo>
             <Typography

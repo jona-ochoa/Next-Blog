@@ -5,6 +5,7 @@ import { Button } from "../components/Navbar.elements";
 import { IoMdArrowRoundForward } from "react-icons/io";
 import { IoArrowForward, IoArrowBack } from "react-icons/io5";
 import Link from 'next/link';
+import ButtonBases from "./ButtonBases";
 
 const SliderData = [
   {
@@ -204,6 +205,7 @@ const Example = ({ slides }) => {
           </SliderButton>
         </ExampleWrapper>
       </ExampleSection>
+      <ButtonBases/>
     </>
   );
 };
