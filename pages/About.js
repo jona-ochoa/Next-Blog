@@ -14,6 +14,8 @@ import {
 import YouTube  from "./YouTube";
 import App from "./App";
 import Example from "./Example";
+import Layout from "../components/Layout";
+import Navbar from '../components/Navbar';
 
 const About = () => {
   return (
@@ -54,3 +56,4 @@ const About = () => {
 };
 
 export default About;
+

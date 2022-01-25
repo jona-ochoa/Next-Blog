@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
- background: #456645;
-  min-height: 100vh;
+ background: #456;
+  height: 100vh;
   padding: 2.5rem .5rem;
   flex: 1;
   display: flex;

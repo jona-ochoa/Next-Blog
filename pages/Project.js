@@ -1,55 +1,215 @@
 
-import styled from "styled-components";
-import Link from "next/link";
-import { Button } from "../components/Navbar.elements";
+import Image from "next/dist/client/image";
+import Slider from "react-slick";
+import { Component } from "react";
+import {
+  ProjectContainer,
+  Heading,
+  Card,
+  Subtitle,
+  Topline,
+} from "../components/project.element";
 
-const ProContainer = styled.section`
-  background: #ff6961;
-  min-height: 100vh;
-  padding: 4rem 2rem;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`;
-
-const Title = styled.h1`
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
-  color: #000;
-  text-align: center;
-`;
-
-function Project() {
+function SampleNextArrow(props) {
+  const { className, style, onClick } = props;
   return (
-    <>
-      <ProContainer>
-        <Title>Lorem Ipsum</Title>
-        <header >
-          <p >
-            Lorem Ipsum es simplemente el texto de relleno de las imprentas y
-            archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar
-            de las industrias desde el año 1500, cuando un impresor (N. del T.
-            persona que se dedica a la imprenta) desconocido usó una galería de
-            textos y los mezcló de tal manera que logró hacer un libro de textos
-            especimen. No sólo sobrevivió 500 años, sino que tambien ingresó
-            como texto de relleno en documentos electrónicos, quedando
-            esencialmente igual al original. Fue popularizado en los 60s con la
-            creación de las hojas Letraset, las cuales contenian pasajes de
-            Lorem Ipsum, y más recientemente con software de autoedición, como
-            por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem
-            Ipsum.
-          </p>
-          <Link href="/About" passHref>
-              <Button primary fontbig>
-                View Home
-              </Button>
-            </Link>
-        </header>
-      </ProContainer>
-    </>
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "black" }}
+      onClick={onClick}
+    />
   );
 }
-export default Project;
+
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "flex", background: "black" }}
+      onClick={onClick}
+    />
+  );
+}
+
+export default class SimpleSlider extends Component {
+  render() {
+    const settings = {
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      nextArrow: <SampleNextArrow />,
+      prevArrow: <SamplePrevArrow />,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 4,
+            slidesToScroll: 2,
+            infinite: true,
+            dots: true,
+          },
+        },
+        {
+          breakpoint: 760,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+          },
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+          },
+        },
+      ],
+    };
+    return (
+      <>
+        <ProjectContainer>
+          <Heading>What we can do four you...</Heading>
+          <div>
+          <Slider {...settings} layout="responsive">
+            <div>
+              <Card>
+                <Image
+                  src="/images/Group 17.png"
+                  alt="box-images"
+                  width={100}
+                  height={100}
+                  objectFit="cover"
+                />
+                <Subtitle>Software development</Subtitle>
+                <Topline>
+                  Create complex enterprise software, ensure reliable software
+                  integration, modernise your legacy system.
+                </Topline>
+              </Card>
+            </div>
+            <div>
+              <Card>
+                <Image
+                  src="/images/Group 16.png"
+                  alt="box-images"
+                  width={100}
+                  height={100}
+                  objectFit="cover"
+                />
+                <Subtitle>UX/UI Desing</Subtitle>
+                <Topline>
+                  Build the product you
+                  <br />
+                  need on time with an experienced team that uses a clear and
+                  effective design process.
+                </Topline>
+              </Card>
+            </div>
+            <div>
+              <Card>
+                <Image
+                  src="/images/Group 13.png"
+                  alt="box-images"
+                  width={100}
+                  height={100}
+                  objectFit="cover"
+                />
+                <Subtitle>
+                  Web <br />
+                  development
+                </Subtitle>
+                <Topline>We offer experience in building a new product</Topline>
+              </Card>
+            </div>
+            <div>
+              <Card>
+                <Image
+                  src="/images/Group 16.png"
+                  alt="box-images"
+                  width={100}
+                  height={100}
+                  objectFit="cover"
+                />
+                <Subtitle>Mobile App Development</Subtitle>
+                <Topline>
+                  Create an impactful mobile app that fits your brand and
+                  industry within a shorter time frame.
+                </Topline>
+              </Card>
+            </div>
+            <div>
+              <Card>
+                <Image
+                  src="/images/Group 18.png"
+                  alt="box-images"
+                  width={100}
+                  height={100}
+                  objectFit="cover"
+                />
+                <Subtitle>Software development</Subtitle>
+                <Topline>
+                  Create complex enterprise software, ensure reliable software
+                  integration, modernise your legacy system.
+                </Topline>
+              </Card>
+            </div>
+            <div>
+              <Card>
+                <Image
+                  src="/images/box4.png"
+                  alt="box-images"
+                  width={100}
+                  height={100}
+                  objectFit="cover"
+                />
+                <Subtitle>UX/UI Desing</Subtitle>
+                <Topline>
+                  Build the product you
+                  <br />
+                  need on time with an experienced team that uses a clear and
+                  effective design process.
+                </Topline>
+              </Card>
+            </div>
+            <div>
+              <Card>
+                <Image
+                  src="/images/Group 18.png"
+                  alt="box-images"
+                  width={100}
+                  height={100}
+                  objectFit="cover"
+                />
+                <Subtitle>
+                  Web <br />
+                  development
+                </Subtitle>
+                <Topline>We offer experience in building a new product</Topline>
+              </Card>
+            </div>
+            <div>
+              <Card>
+                <Image
+                  src="/images/Group 16.png"
+                  alt="box-images"
+                  width={100}
+                  height={100}
+                  objectFit="cover"
+                />
+                <Subtitle>Mobile App Development</Subtitle>
+                <Topline>
+                  Create an impactful mobile app that fits your brand and
+                  industry within a shorter time frame.
+                </Topline>
+              </Card>
+            </div>
+          </Slider>
+          </div>
+        </ProjectContainer>
+      </>
+    );
+  }
+}

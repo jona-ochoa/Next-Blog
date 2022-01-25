@@ -3,28 +3,35 @@ import styled from "styled-components";
 import Project from "./Project";
 import About from "./About";
 import Example from "./Example";
+import Navbar from '../components/Navbar';
+import Layout from "../components/Layout";
 
 const Container = styled.section`
-  width: 100%;
-  height: 100%;
   background: #949;
   display: flex;
   overflow: hidden;
   position: relative;
+  @media screen and (max-width: 660px) {
+    flex-direction: column;
+  }
+  
 `;
 const Card = styled.div`
   flex: 1;
   padding-left: 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
+  @media screen and (max-width: 660px) {
+   padding-left: 0;
+  }
 `;
 
 const BGimage = styled.div`
-  right: 0;
-  @media screen and (max-width: 660px) {
-    display: none;
-  }
+   @media screen and (max-width: 660px) {
+   max-width: 320px;
+  }  
+
 `;
 
 const Title = styled.h1`
@@ -36,6 +43,9 @@ const Title = styled.h1`
   @media screen and (max-width: 660px) {
     font-size: 54px;
   }
+  @media screen and (max-width: 660px) {
+   padding-left: .5rem;
+  }  
 `;
 
 const Descrip = styled.p`
@@ -45,6 +55,9 @@ const Descrip = styled.p`
   color: #9dd9d2;
   font-size: 18px;
   line-height: 44px;
+  @media screen and (max-width: 660px) {
+   padding-left: .5rem;
+  }  
 `;
 
 const Index = () => {
@@ -77,3 +90,5 @@ const Index = () => {
 };
 
 export default Index;
+
+

@@ -7,7 +7,7 @@ const Layout = ({ children }) => {
   return (
     <>
         <Head>
-          <title>Jonan</title>
+          <title>JonanCode</title>
           <link rel="icon" href="/favicon.ico" />
         </Head>
         <Navbar />
